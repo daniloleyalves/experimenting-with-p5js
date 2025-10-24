@@ -67,95 +67,98 @@ class Particle {
         targetX = 0;
         targetY = lerp(rootPosition.y * 0.95, height * 0.08, treeGrowth);
         break;
-      case 1: // Left main branch
-        targetX = -280 * progress * this.branchVariation * sizeScale;
+      case 1: // Left main branch - starts higher
+        targetX = -280 * pow(progress, 1.5) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.9, height * 0.28, treeGrowth) +
+          lerp(rootPosition.y * 0.7, height * 0.28, treeGrowth) +
           sin(progress * PI) * 70 * sizeScale;
         break;
-      case 2: // Right main branch
-        targetX = 280 * progress * this.branchVariation * sizeScale;
+      case 2: // Right main branch - starts higher
+        targetX = 280 * pow(progress, 1.5) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.9, height * 0.28, treeGrowth) +
+          lerp(rootPosition.y * 0.7, height * 0.28, treeGrowth) +
           sin(progress * PI) * 70 * sizeScale;
         break;
       case 3: // Upper left branch
-        targetX = -220 * progress * this.branchVariation * sizeScale;
+        targetX = -260 * pow(progress, 1.3) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.85, height * 0.12, treeGrowth) +
+          lerp(rootPosition.y * 0.65, height * 0.12, treeGrowth) +
           cos(progress * PI * 0.5) * 50 * sizeScale;
         break;
       case 4: // Upper right branch
-        targetX = 220 * progress * this.branchVariation * sizeScale;
+        targetX = 260 * pow(progress, 1.3) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.85, height * 0.12, treeGrowth) +
+          lerp(rootPosition.y * 0.65, height * 0.12, treeGrowth) +
           cos(progress * PI * 0.5) * 50 * sizeScale;
         break;
       case 5: // Center-left branch
-        targetX = -140 * progress * this.branchVariation * sizeScale;
+        targetX = -140 * pow(progress, 1.4) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.88, height * 0.22, treeGrowth) +
+          lerp(rootPosition.y * 0.68, height * 0.22, treeGrowth) +
           sin(progress * TWO_PI) * 40 * sizeScale;
         break;
       case 6: // Center-right branch
-        targetX = 140 * progress * this.branchVariation * sizeScale;
+        targetX = 140 * pow(progress, 1.4) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.88, height * 0.22, treeGrowth) +
+          lerp(rootPosition.y * 0.68, height * 0.22, treeGrowth) +
           sin(progress * TWO_PI) * 40 * sizeScale;
         break;
       case 7: // Far left branch
-        targetX = -340 * progress * this.branchVariation * sizeScale;
+        targetX = -380 * pow(progress, 1.2) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.92, height * 0.38, treeGrowth) +
+          lerp(rootPosition.y * 0.72, height * 0.38, treeGrowth) +
           cos(progress * PI) * 60 * sizeScale;
         break;
       case 8: // Far right branch
-        targetX = 340 * progress * this.branchVariation * sizeScale;
+        targetX = 380 * pow(progress, 1.2) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.92, height * 0.38, treeGrowth) +
+          lerp(rootPosition.y * 0.72, height * 0.38, treeGrowth) +
           cos(progress * PI) * 60 * sizeScale;
         break;
       case 9: // Upper center-left
-        targetX = -100 * progress * this.branchVariation * sizeScale;
+        targetX = -120 * pow(progress, 1.3) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.83, height * 0.1, treeGrowth) +
+          lerp(rootPosition.y * 0.63, height * 0.1, treeGrowth) +
           sin(progress * PI * 1.5) * 30 * sizeScale;
         break;
       case 10: // Upper center-right
-        targetX = 100 * progress * this.branchVariation * sizeScale;
+        targetX = 120 * pow(progress, 1.3) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.83, height * 0.1, treeGrowth) +
+          lerp(rootPosition.y * 0.63, height * 0.1, treeGrowth) +
           sin(progress * PI * 1.5) * 30 * sizeScale;
         break;
       case 11: // Middle spreading branch
         targetX =
-          random(-180, 180) * progress * this.branchVariation * sizeScale;
+          random(-200, 200) *
+          pow(progress, 1.4) *
+          this.branchVariation *
+          sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.87, height * 0.18, treeGrowth) +
+          lerp(rootPosition.y * 0.67, height * 0.18, treeGrowth) +
           sin(progress * PI * 2) * 45 * sizeScale;
         break;
       case 12: // Lower left branch
-        targetX = -260 * progress * this.branchVariation * sizeScale;
+        targetX = -220 * pow(progress, 1.6) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.93, height * 0.45, treeGrowth) +
+          lerp(rootPosition.y * 0.73, height * 0.45, treeGrowth) +
           cos(progress * PI * 0.8) * 55 * sizeScale;
         break;
       case 13: // Lower right branch
-        targetX = 260 * progress * this.branchVariation * sizeScale;
+        targetX = 220 * pow(progress, 1.6) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.93, height * 0.45, treeGrowth) +
+          lerp(rootPosition.y * 0.73, height * 0.45, treeGrowth) +
           cos(progress * PI * 0.8) * 55 * sizeScale;
         break;
       case 14: // Wide left branch
-        targetX = -380 * progress * this.branchVariation * sizeScale;
+        targetX = -420 * pow(progress, 1.2) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.91, height * 0.32, treeGrowth) +
+          lerp(rootPosition.y * 0.71, height * 0.32, treeGrowth) +
           sin(progress * PI * 1.2) * 50 * sizeScale;
         break;
       case 15: // Wide right branch
-        targetX = 380 * progress * this.branchVariation * sizeScale;
+        targetX = 420 * pow(progress, 1.2) * this.branchVariation * sizeScale;
         targetY =
-          lerp(rootPosition.y * 0.91, height * 0.32, treeGrowth) +
+          lerp(rootPosition.y * 0.71, height * 0.32, treeGrowth) +
           sin(progress * PI * 1.2) * 50 * sizeScale;
         break;
     }
@@ -269,7 +272,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0, 30);
+  background(0, 0, 0, 2);
 
   translate(width / 2, 0);
 

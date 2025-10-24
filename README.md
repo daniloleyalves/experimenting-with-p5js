@@ -7,7 +7,7 @@ Die Bewegung und Struktur werden durch Zufall, Perlin Noise und schrittweise Par
 
 ## 🎬 Vorschau
 
-[Demo ansehen](demo.mov)
+[Demo ansehen](preview.mov)
 
 ## 🚀 Ausprobieren
 

@@ -1,7 +1,7 @@
 # 🌿 Prozedurale Baum-Animation – p5.js
 
 Ein kleines p5.js-Experiment, das fließende Partikelstrahlen visualisiert.
-Tausende Partikel formen im Laufe der Zeit Äste, Stamm und Verbindungen eine abstrakten Baumes.
+Tausende Partikel formen im Laufe der Zeit Äste, Stamm und Verbindungen eines abstrakten Baumes.
 
 Die Bewegung und Struktur werden durch Zufall, Perlin Noise und schrittweise Parametersteuerung erzeugt.
 
